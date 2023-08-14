@@ -11,29 +11,26 @@
 
 <p id="demo"></p>
 
-<script>
-function myFunction() {
-    var x, text;
-    let test = "test"
+ <h1>Text Input Comparison</h1>
+    <label for="textInput">Enter a secret word:</label>
+    <input type="text" id="textInput">
+    <button onclick="compareText()">Check</button>
+    <p id="result"></p>
 
-    var isValidZip = /(^\d{5}$)|(^\d{5}-\d{4}$)/;
-
-    // Get the value of the input field with id="numb"
-    x = document.getElementById("numb").value;
-    
-    let result = x.localeCompare(test);
-    
-    document.write(result);
-    // If x is Not a Number or less than one or greater than 10
-    if (!isValidZip.test(x)) {
-        text = "Input not valid";
-    } else {
-        text = "Input OK";
-    }
-    document.getElementById("demo").innerHTML = text;
-}
-</script>
-
+    <script>
+        function compareText() {
+            var userInput = document.getElementById("textInput").value;
+            var secretWord = "apple"; // Change this to the desired secret word
+            
+            var resultElement = document.getElementById("result");
+            
+            if (userInput === secretWord) {
+                resultElement.textContent = "Correct! You guessed the secret word.";
+            } else {
+                resultElement.textContent = "Incorrect. Try again.";
+            }
+        }
+    </script>
 
 </body>
 </html>

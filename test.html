@@ -1,18 +1,10 @@
 <!DOCTYPE html>
 <html>
 <body>
-<h1>#*!4@5 #$&!_</h1>
+<h1 id="heading"><b>The Original Content</b></h1>
 <p>01001001 00100000 01101100 01101001 01101011 01100101 00100000 01110100 01110101 01110010 01110100 01101100 01100101 01110011</p>
 
-
-<input id="numb">
-
-<button type="button" onclick="myFunction()">Submit</button>
-
-<p id="demo"></p>
-
- <h1>Text Input Comparison</h1>
-    <label for="textInput">Enter a secret word:</label>
+    <label for="textInput">Enter decoded message:</label>
     <input type="text" id="textInput">
     <button onclick="compareText()">Check</button>
     <p id="result"></p>
@@ -20,16 +12,39 @@
     <script>
         function compareText() {
             var userInput = document.getElementById("textInput").value;
-            var secretWord = "apple"; // Change this to the desired secret word
+            var secretWord = "I like turtles"; // Change this to the desired secret word
             
             var resultElement = document.getElementById("result");
             
             if (userInput === secretWord) {
-                resultElement.textContent = "Correct! You guessed the secret word.";
+                resultElement.textContent = "Correct!";
             } else {
                 resultElement.textContent = "Incorrect. Try again.";
             }
         }
+    </script>
+
+    <script>
+    function change(){
+    var elem = document.getElementById("heading");
+    if (elem.innerHTML=="The Original Content"){
+        elem.innerHTML = "The New Content";
+    }
+    else{
+        elem.innerHTML = "The Original Content";
+        }
+    }
+
+    function change_2(){
+        var elem = document.getElementById("heading");
+        if (elem.innerHTML=="The Original Content" || elem.innerHTML=="The New Content"){
+            elem.innerHTML = "";
+        }
+        else{
+            elem.innerHTML="The Original Content"
+        }
+    }
+
     </script>
 
 </body>

@@ -29,23 +29,23 @@
 </script>
 
 <script>
-    var hidden = false;
+  var hidden2 = false;
     function unhide2() {
     var hid = document.getElementsByClassName("exp2");
     // Emulates jQuery $(element).is(':hidden');
-    if (hidden == false)
+    if (hidden2 == false)
     {
         if(hid[0].offsetWidth > 0 && hid[0].offsetHeight > 0) {
         hid[0].style.visibility = "visible";
         }
-        hidden = true;
+        hidden2 = true;
     }
     else
     {
         if(hid[0].offsetWidth > 0 && hid[0].offsetHeight > 0) {
         hid[0].style.visibility = "hidden";
         }
-        hidden = false;
+        hidden2 = false;
     }
 }
 </script>

@@ -1,5 +1,33 @@
 <!DOCTYPE html>
 <html>
+
+<style>
+    .exp{visibility: hidden;}
+</style>
+
+<script>
+    var hidden = false;
+    function unhide() {
+    var hid = document.getElementsByClassName("exp");
+    // Emulates jQuery $(element).is(':hidden');
+    if (hidden == false)
+    {
+        if(hid[0].offsetWidth > 0 && hid[0].offsetHeight > 0) {
+        hid[0].style.visibility = "visible";
+        }
+        hidden = true;
+    }
+    else
+    {
+        if(hid[0].offsetWidth > 0 && hid[0].offsetHeight > 0) {
+        hid[0].style.visibility = "hidden";
+        }
+        hidden = false;
+    }
+    console.log("Button 1 clicked");
+}
+</script>
+
 <body>
 <h1 id="heading"><b>#*!4@5 #$&!_t</b></h1>
 <p id = "binarymsg">01001001 00100000 01101100 01101001 01101011 01100101 00100000 01110100 01110101 01110010 01110100 01101100 01100101 01110011</p>
@@ -22,11 +50,15 @@
                 elem.innerHTML = "Decode this!";
                 var elem2 = document.getElementById("binarymsg");
                 elem2.innerHTML = "I  l i k e  t u r t l e s";
+                unhide();
             } else {
                 resultElement.textContent = "Incorrect. Try again.";
             }
         }
     </script>
 
+    <div class="exp">
+        <a href="test2.html">Continue on!</a>
+    </div>
 </body>
 </html>

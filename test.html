@@ -2,7 +2,7 @@
 <html>
 <body>
 <h1 id="heading"><b>#*!4@5 #$&!_t</b></h1>
-<p>01001001 00100000 01101100 01101001 01101011 01100101 00100000 01110100 01110101 01110010 01110100 01101100 01100101 01110011</p>
+<p id = "binarymsg">01001001 00100000 01101100 01101001 01101011 01100101 00100000 01110100 01110101 01110010 01110100 01101100 01100101 01110011</p>
 
     <label for="textInput">Enter decoded message:</label>
     <input type="text" id="textInput">
@@ -20,6 +20,8 @@
                 resultElement.textContent = "Correct!";
                 var elem = document.getElementById("heading");
                 elem.innerHTML = "Decode this!";
+                var elem2 = document.getElementById("binarymsg");
+                elem2.innerHTML = "I  l i k e  t u r t l e s";
             } else {
                 resultElement.textContent = "Incorrect. Try again.";
             }

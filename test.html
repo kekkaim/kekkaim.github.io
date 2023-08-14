@@ -3,7 +3,33 @@
 <body>
 <h1>#*!4@5 #$&!_</h1>
 <p>01001001 00100000 01101100 01101001 01101011 01100101 00100000 01110100 01110101 01110010 01110100 01101100 01100101 01110011</p>
-<label for="fname">First name:</label>
-<input type="text" id="fname" name="fname"><br><br>
+
+
+<input id="numb">
+
+<button type="button" onclick="myFunction()">Submit</button>
+
+<p id="demo"></p>
+
+<script>
+function myFunction() {
+    var x, text;
+
+    var isValidZip = /(^\d{5}$)|(^\d{5}-\d{4}$)/;
+
+    // Get the value of the input field with id="numb"
+    x = document.getElementById("numb").value;
+
+    // If x is Not a Number or less than one or greater than 10
+    if (!isValidZip.test(x)) {
+        text = "Input not valid";
+    } else {
+        text = "Input OK";
+    }
+    document.getElementById("demo").innerHTML = text;
+}
+</script>
+
+
 </body>
 </html>

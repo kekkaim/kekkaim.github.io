@@ -1,7 +1,119 @@
 <!DOCTYPE html>
 <html>
+
+<style>
+    .exp{visibility: hidden;}
+    .exp2{visibility: hidden;}
+    .exp3{visibility: hidden;}
+</style>
+
+<script>
+    var hidden = false;
+    function unhide() {
+    var hid = document.getElementsByClassName("exp");
+    // Emulates jQuery $(element).is(':hidden');
+    if (hidden == false)
+    {
+        if(hid[0].offsetWidth > 0 && hid[0].offsetHeight > 0) {
+        hid[0].style.visibility = "visible";
+        }
+        hidden = true;
+    }
+    else
+    {
+        if(hid[0].offsetWidth > 0 && hid[0].offsetHeight > 0) {
+        hid[0].style.visibility = "hidden";
+        }
+        hidden = false;
+    }
+}
+</script>
+
+<script>
+  var hidden2 = false;
+    function unhide2() {
+    var hid = document.getElementsByClassName("exp2");
+    // Emulates jQuery $(element).is(':hidden');
+    if (hidden2 == false)
+    {
+        if(hid[0].offsetWidth > 0 && hid[0].offsetHeight > 0) {
+        hid[0].style.visibility = "visible";
+        }
+        hidden2 = true;
+    }
+    else
+    {
+        if(hid[0].offsetWidth > 0 && hid[0].offsetHeight > 0) {
+        hid[0].style.visibility = "hidden";
+        }
+        hidden2 = false;
+    }
+}
+</script>
+
+<script>
+  var hidden3 = false;
+    function unhide2() {
+    var hid = document.getElementsByClassName("exp3");
+    // Emulates jQuery $(element).is(':hidden');
+    if (hidden3 == false)
+    {
+        if(hid[0].offsetWidth > 0 && hid[0].offsetHeight > 0) {
+        hid[0].style.visibility = "visible";
+        }
+        hidden3 = true;
+    }
+    else
+    {
+        if(hid[0].offsetWidth > 0 && hid[0].offsetHeight > 0) {
+        hid[0].style.visibility = "hidden";
+        }
+        hidden3 = false;
+    }
+}
+</script>
+
 <body>
-<h1>Level 2: Coming soon</h1>
+<h1 id="heading"><b>Level 2: What does this message say?</b></h1>
+<p id = "mixedmsg">Peanut butter and jelly</p>
+
+    <label for="textInput">Enter decoded message:</label>
+    <input type="text" id="textInput">
+    <button onclick="compareText()">Check</button>
+    <p id="result"></p>
+
+    <script>
+        function compareText() {
+            var userInput = document.getElementById("textInput").value;
+            var secretWord = "Peanut butter and jelly"; // Change this to the desired secret word
+            
+            var resultElement = document.getElementById("result");
+            
+            if (userInput === secretWord) {
+                resultElement.textContent = "Correct!";
+                var elem = document.getElementById("heading");
+                elem.innerHTML = "Level 2: What does this message say?";
+                var elem2 = document.getElementById("mixedmsg");
+                elem2.innerHTML = "P e a n u t  b u t t e r  a n d  j e l l y";
+                unhide();
+            } else {
+                resultElement.textContent = "Incorrect. Try again.";
+            }
+        }
+    </script>
+
+    <div class="exp">
+        <a href="test2.html">Continue on!</a>
+    </div>
+    <br>
+    <button onclick="unhide2()">Click me for a hint!</button>
+    <div class="exp2">
+        <p>The message is in english and scrambled.</p>
+    </div>
+    <button onclick="unhide3()">Click me for a hint!</button>
+    <div class="exp3">
+        <p>The item is used in a sandwich.</p>
+    </div>
 
 </body>
 </html>

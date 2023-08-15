@@ -52,10 +52,10 @@
 </script>
 
 <body>
-<h1 id="heading"><b>Level 3: Coming soon</b></h1>
-<p id = "mixedmsg"></p>
+<h1 id="heading"><b>Level 3: What street are the coordinates at?</b></h1>
+<p id = "mixedmsg">21.286341575546317, -157.8020328703762</p>
 
-    <label for="textInput">Enter decoded message:</label>
+    <label for="textInput">Enter street name:</label>
     <input type="text" id="textInput">
     <button onclick="compareText()">Check</button>
     <p id="result"></p>
@@ -63,11 +63,11 @@
     <script>
         function compareText() {
             var userInput = document.getElementById("textInput").value;
-            var secretWord = "abcfewghryn"; // Change this to the desired secret word
+            var secretWord = "keanu st"; // Change this to the desired secret word
             
             var resultElement = document.getElementById("result");
             
-            if (userInput === secretWord) {
+            if (userInput.toLowerCase() === secretWord) {
                 resultElement.textContent = "Correct!";
                 var elem = document.getElementById("heading");
                 elem.innerHTML = "Level 2: What does this message say?";

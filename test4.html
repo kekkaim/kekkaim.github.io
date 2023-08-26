@@ -1,1 +1,39 @@
-<!-- Why did i choose those specific coordinates? Because 7-8-9. The 3 nearest avenue numbers
+<!-- Why did i choose those specific coordinates? Because 7-8-9. The 3 nearest avenue numbers !-->
+
+<style>
+    .exp{visibility: hidden;}
+</style>
+
+<script>
+    var hidden = false;
+    function unhide() {
+    var hid = document.getElementsByClassName("exp");
+    // Emulates jQuery $(element).is(':hidden');
+    if (hidden == false)
+    {
+        if(hid[0].offsetWidth > 0 && hid[0].offsetHeight > 0) {
+        hid[0].style.visibility = "visible";
+        }
+        hidden = true;
+    }
+    else
+    {
+        if(hid[0].offsetWidth > 0 && hid[0].offsetHeight > 0) {
+        hid[0].style.visibility = "hidden";
+        }
+        hidden = false;
+    }
+}
+</script>
+
+<!DOCTYPE html>
+<html>
+<body>
+<h1>You must be wondering, why did I choose those specific coordinates?</h1>
+<button onclick="unhide()">It's because...</button>
+<div class="exp">
+    <p>7-8-9. The 3 nearest avenues.</p>
+</div>
+</div>
+</body>
+</html>
